@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {CreateComponent} from './create/create.component';
+import { CreateComponent } from './create/create.component';
 
 @Component({
   selector: 'my-app',
@@ -7,8 +7,9 @@ import {CreateComponent} from './create/create.component';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent implements OnInit {
+   @ViewChild( CreateComponent )child: CreateComponent;
   name = 'Angular';
-   @ViewChild(CreateComponent) child: CreateComponent;
+  
   counter = 0;
 ngOnInit(){}
   private increaseCounter(this) {
